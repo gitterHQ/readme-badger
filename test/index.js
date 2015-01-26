@@ -66,6 +66,15 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
+  it('inserts into rst', function() {
+    var before = fs.readFileSync(__dirname + '/examples/rst-before.rst', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/rst-after.rst', { encoding: 'utf8' });
+
+    var result = badger.addBadge(before, 'rst', imageUrl, linkUrl, altText);
+
+    assert.equal(result, after);
+  });
+
   it('inserts into unsupported filetypes', function() {
     var before = fs.readFileSync(__dirname + '/examples/plaintext-before.txt', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/plaintext-after.txt', { encoding: 'utf8' });
