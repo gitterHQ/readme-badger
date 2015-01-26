@@ -1,0 +1,32 @@
+{
+  "name": "readme-badger",
+  "version": "0.0.1",
+  "description": "Inserts a Gitter badge into a readme",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitterHQ/readme-badger.git"
+  },
+  "keywords": [
+    "gitter",
+    "badge",
+    "badger",
+    "github",
+    "readme"
+  ],
+  "author": "Andy Trevorah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gitterHQ/readme-badger/issues"
+  },
+  "homepage": "https://github.com/gitterHQ/readme-badger",
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  }
+}
