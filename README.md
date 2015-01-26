@@ -11,7 +11,7 @@ Install
 How To Use
 ----------
 
-### `function addBadge(content, fileExt, imageUrl, linkUrl, altText)`
+### `addBadge(content, fileExt, imageUrl, linkUrl, altText)`
 
 Returns the content but with a new badge inserted.
 
@@ -21,7 +21,7 @@ Returns the content but with a new badge inserted.
 * `linkUrl`: the url for the badge to link to.
 * `altText`: the alternative if images arnt visible. This will be used on its own for plaintext READMEs, so include a url in the text.
 
-### `function hasImageSupport(fileExt)`
+### `hasImageSupport(fileExt)`
 
 Returns true/false depending on whether the readme will render a badge image or just the altText.
 
