@@ -48,6 +48,15 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
+  it('inserts into creole', function() {
+    var before = fs.readFileSync(__dirname + '/examples/creole-before.creole', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/creole-after.creole', { encoding: 'utf8' });
+
+    var result = badger.addBadge(before, 'creole', imageUrl, linkUrl, altText);
+
+    assert.equal(result, after);
+  });
+
   it('inserts into unsupported filetypes', function() {
     var before = fs.readFileSync(__dirname + '/examples/plaintext-before.txt', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/plaintext-after.txt', { encoding: 'utf8' });
