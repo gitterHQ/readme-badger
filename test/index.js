@@ -16,6 +16,15 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
+  it('inserts into textile', function() {
+    var before = fs.readFileSync(__dirname + '/examples/textile-before.textile', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/textile-after.textile', { encoding: 'utf8' });
+
+    var result = badger.addBadge('myorg/myrepo', 'textile', before);
+
+    assert.equal(result, after);
+  });
+
   it('inserts into rdoc', function() {
     var before = fs.readFileSync(__dirname + '/examples/rdoc-before.rdoc', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/rdoc-after.rdoc', { encoding: 'utf8' });

@@ -1,0 +1,7 @@
+h1. My Amazing Library
+
+!https://badges.gitter.im/Join%20Chat.svg(Gitter)!:https://gitter.im/myorg/myrepo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
+h2. Features
+
+It does amazing things!
