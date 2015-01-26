@@ -19,11 +19,11 @@ Returns the content but with a new badge inserted.
 * `fileExt`: the file extension of the README (md, textile, rdoc etc).
 * `imageUrl`: the image url for the badge.
 * `linkUrl`: the url for the badge to link to.
-* `altText`: the alternative if images arnt visible. This will be used on its own for plaintext READMEs, so include a url in the text.
+* `altText`: the alternative if images aren't visible. This will be used on its own for plaintext READMEs, so include a url in the text.
 
 ### `hasImageSupport(fileExt)`
 
-Returns true/false depending on whether the readme will render a badge image or just the altText.
+Returns true/false depending on whether the format (`fileExt`) will render a badge image or just the altText.
 
 * `fileExt`: the file extension of the README (md, textile, rdoc etc)
 
