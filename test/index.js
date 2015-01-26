@@ -7,11 +7,17 @@ var fs = require('fs');
 var badger = require('..');
 
 describe('readme-badger', function() {
+
+  var imageUrl = 'https://badges.gitter.im/Join%20Chat.svg';
+  var linkUrl = 'https://gitter.im/myorg/myrepo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge';
+  var altText = 'Gitter';
+  var plaintextFailover = 'Join the chat: https://gitter.im/myorg/myrepo';
+
   it('inserts into markdown', function() {
     var before = fs.readFileSync(__dirname + '/examples/markdown-before.md', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/markdown-after.md', { encoding: 'utf8' });
 
-    var result = badger.addBadge('myorg/myrepo', 'md', before);
+    var result = badger.addBadge(before, 'md', imageUrl, linkUrl, altText, plaintextFailover);
 
     assert.equal(result, after);
   });
@@ -20,7 +26,7 @@ describe('readme-badger', function() {
     var before = fs.readFileSync(__dirname + '/examples/textile-before.textile', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/textile-after.textile', { encoding: 'utf8' });
 
-    var result = badger.addBadge('myorg/myrepo', 'textile', before);
+    var result = badger.addBadge(before, 'textile', imageUrl, linkUrl, altText, plaintextFailover);
 
     assert.equal(result, after);
   });
@@ -29,7 +35,7 @@ describe('readme-badger', function() {
     var before = fs.readFileSync(__dirname + '/examples/rdoc-before.rdoc', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/rdoc-after.rdoc', { encoding: 'utf8' });
 
-    var result = badger.addBadge('myorg/myrepo', 'rdoc', before);
+    var result = badger.addBadge(before, 'rdoc', imageUrl, linkUrl, altText, plaintextFailover);
 
     assert.equal(result, after);
   });
@@ -38,7 +44,7 @@ describe('readme-badger', function() {
     var before = fs.readFileSync(__dirname + '/examples/orgmode-before.org', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/orgmode-after.org', { encoding: 'utf8' });
 
-    var result = badger.addBadge('myorg/myrepo', 'org', before);
+    var result = badger.addBadge(before, 'org', imageUrl, linkUrl, altText, plaintextFailover);
 
     assert.equal(result, after);
   });
@@ -47,7 +53,7 @@ describe('readme-badger', function() {
     var before = fs.readFileSync(__dirname + '/examples/plaintext-before.txt', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/plaintext-after.txt', { encoding: 'utf8' });
 
-    var result = badger.addBadge('myorg/myrepo', 'txt', before);
+    var result = badger.addBadge(before, 'txt', imageUrl, linkUrl, altText, plaintextFailover);
 
     assert.equal(result, after);
   });
