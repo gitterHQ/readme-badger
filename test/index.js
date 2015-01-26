@@ -75,6 +75,15 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
+  it('inserts into asciidoc', function() {
+    var before = fs.readFileSync(__dirname + '/examples/asciidoc-before.asciidoc', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/asciidoc-after.asciidoc', { encoding: 'utf8' });
+
+    var result = badger.addBadge(before, 'asciidoc', imageUrl, linkUrl, altText);
+
+    assert.equal(result, after);
+  });
+
   it('inserts into unsupported filetypes', function() {
     var before = fs.readFileSync(__dirname + '/examples/plaintext-before.txt', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/plaintext-after.txt', { encoding: 'utf8' });
