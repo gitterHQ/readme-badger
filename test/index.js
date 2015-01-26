@@ -84,6 +84,15 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
+  it('inserts into pod', function() {
+    var before = fs.readFileSync(__dirname + '/examples/pod-before.pod', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/pod-after.pod', { encoding: 'utf8' });
+
+    var result = badger.addBadge(before, 'pod', imageUrl, linkUrl, altText);
+
+    assert.equal(result, after);
+  });
+
   it('inserts into unsupported filetypes', function() {
     var before = fs.readFileSync(__dirname + '/examples/plaintext-before.txt', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/plaintext-after.txt', { encoding: 'utf8' });
