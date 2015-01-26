@@ -34,6 +34,15 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
+  it('inserts into orgmode', function() {
+    var before = fs.readFileSync(__dirname + '/examples/orgmode-before.org', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/orgmode-after.org', { encoding: 'utf8' });
+
+    var result = badger.addBadge('myorg/myrepo', 'org', before);
+
+    assert.equal(result, after);
+  });
+
   it('inserts into unsupported filetypes', function() {
     var before = fs.readFileSync(__dirname + '/examples/plaintext-before.txt', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/plaintext-after.txt', { encoding: 'utf8' });
