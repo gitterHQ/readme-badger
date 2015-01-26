@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/gitterHQ/readme-badger",
   "devDependencies": {
-    "mocha": "^2.1.0"
+    "mocha": "1.20.1"
   }
 }

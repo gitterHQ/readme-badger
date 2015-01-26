@@ -16,6 +16,15 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
+  it('inserts into rdoc', function() {
+    var before = fs.readFileSync(__dirname + '/examples/rdoc-before.rdoc', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/rdoc-after.rdoc', { encoding: 'utf8' });
+
+    var result = badger.addBadge('myorg/myrepo', 'rdoc', before);
+
+    assert.equal(result, after);
+  });
+
   it('inserts into unsupported filetypes', function() {
     var before = fs.readFileSync(__dirname + '/examples/plaintext-before.txt', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/plaintext-after.txt', { encoding: 'utf8' });
