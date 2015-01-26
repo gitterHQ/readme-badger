@@ -1,7 +1,7 @@
 {
   "name": "readme-badger",
   "version": "0.0.1",
-  "description": "Inserts a Gitter badge into a readme",
+  "description": "Inserts badges into GitHub READMEs",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,6 @@
     "url": "https://github.com/gitterHQ/readme-badger.git"
   },
   "keywords": [
-    "gitter",
     "badge",
     "badger",
     "github",
