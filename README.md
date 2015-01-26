@@ -69,3 +69,8 @@ Building Locally
 2. `cd readme-badger`
 3. `npm install`
 4. `npm test`
+
+License
+-------
+
+MIT
