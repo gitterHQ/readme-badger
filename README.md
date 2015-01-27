@@ -54,19 +54,17 @@ console.log(readmeWithBadge);
 Format (`fileExt`) Support
 --------------
 
-readme-badger supports all of the [GitHub README markups](https://github.com/github/markup#markups):
+readme-badger supports almost all of the [GitHub README markups](https://github.com/github/markup#markups):
 * [markdown, mdown, mkdn, md](http://daringfireball.net/projects/markdown/)
 * [textile](http://www.textism.com/tools/textile/)
 * [rdoc](http://rdoc.sourceforge.net/)
 * [org](http://orgmode.org/)
-* [creole](http://wikicreole.org/)
 * [mediawiki, wiki](http://www.mediawiki.org/wiki/Help:Formatting)
 * [rst](http://docutils.sourceforge.net/rst.html)
 * [asciidoc, adoc, asc](http://asciidoc.org/)
 * [pod](http://search.cpan.org/dist/perl/pod/perlpod.pod)
 
-
-It will also failover to inserting the `altText` at the bottom of the README for any format that doesnt have image support.
+It will also failover to inserting the `altText` at the bottom of the README for any format that doesnt have image link support (creole, txt).
 
 Building Locally
 ----------------

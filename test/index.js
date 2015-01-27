@@ -48,15 +48,6 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
-  it('inserts into creole', function() {
-    var before = fs.readFileSync(__dirname + '/examples/creole-before.creole', { encoding: 'utf8' });
-    var after = fs.readFileSync(__dirname + '/examples/creole-after.creole', { encoding: 'utf8' });
-
-    var result = badger.addBadge(before, 'creole', imageUrl, linkUrl, altText);
-
-    assert.equal(result, after);
-  });
-
   it('inserts into mediawiki', function() {
     var before = fs.readFileSync(__dirname + '/examples/mediawiki-before.mediawiki', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/mediawiki-after.mediawiki', { encoding: 'utf8' });
