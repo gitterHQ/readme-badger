@@ -1,6 +1,8 @@
 readme-badger
 =============
 
+[![Build Status](https://travis-ci.org/gitterHQ/readme-badger.svg?branch=master)](https://travis-ci.org/gitterHQ/readme-badger)
+
 Whizzy badges in your READMEs.
 
 Install
