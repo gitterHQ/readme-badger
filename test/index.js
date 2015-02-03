@@ -57,15 +57,6 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
-  it('inserts into rst', function() {
-    var before = fs.readFileSync(__dirname + '/examples/rst-before.rst', { encoding: 'utf8' });
-    var after = fs.readFileSync(__dirname + '/examples/rst-after.rst', { encoding: 'utf8' });
-
-    var result = badger.addBadge(before, 'rst', imageUrl, linkUrl, altText);
-
-    assert.equal(result, after);
-  });
-
   it('inserts into asciidoc', function() {
     var before = fs.readFileSync(__dirname + '/examples/asciidoc-before.asciidoc', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/asciidoc-after.asciidoc', { encoding: 'utf8' });
