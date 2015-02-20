@@ -8,9 +8,9 @@ var badger = require('../..');
 
 describe('reStructuredText', function() {
 
-  var imageUrl = 'https://badges.gitter.im/Join%20Chat.svg';
-  var linkUrl = 'https://gitter.im/myorg/myrepo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge';
-  var altText = 'Join the chat at https://gitter.im/myorg/myrepo';
+  var imageUrl = 'https://badges.gitter.im/badge.svg';
+  var linkUrl = 'https://gitter.im';
+  var altText = 'Badgers are great!';
 
   it('inserts below double hash header', function() {
     var before = fs.readFileSync(__dirname + '/before.rst', { encoding: 'utf8' });
