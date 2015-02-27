@@ -66,7 +66,7 @@ readme-badger supports almost all of the [GitHub README markups](https://github.
 * [asciidoc, adoc, asc](http://asciidoc.org/)
 * [pod](http://search.cpan.org/dist/perl/pod/perlpod.pod)
 
-It will also failover to inserting the `altText` at the bottom of the README for any format that doesnt have image link support (creole, txt).
+It will also failover to inserting the `altText` at the bottom of the README for any format that doesnt have image link support (creole, txt or anything else).
 
 Building Locally
 ----------------

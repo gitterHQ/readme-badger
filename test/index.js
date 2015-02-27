@@ -75,7 +75,7 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
-  it('inserts into unsupported filetypes', function() {
+  it('inserts into plaintext', function() {
     var before = fs.readFileSync(__dirname + '/examples/plaintext-before.txt', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/plaintext-after.txt', { encoding: 'utf8' });
 
@@ -84,4 +84,12 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
+  it('inserts into unsupported filetypes', function() {
+    var before = fs.readFileSync(__dirname + '/examples/plaintext-before.txt', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/plaintext-after.txt', { encoding: 'utf8' });
+
+    var result = badger.addBadge(before, null, imageUrl, linkUrl, altText);
+
+    assert.equal(result, after);
+  });
 });
