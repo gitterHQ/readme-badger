@@ -1,6 +1,10 @@
 My Amazing Library
 ==================
 
+Sweeet and hardworkin..
+
+image:https://badge.fury.io/js/readme-badger.svg[link="http://badge.fury.io/js/readme-badger"]
+
 Features
 --------
 
