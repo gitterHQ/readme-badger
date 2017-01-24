@@ -94,8 +94,8 @@ describe('readme-badger', function() {
   });
 
   it('inserts into empty files', function () {
-    var before = ''
-    var after = '\n\n[![Join the chat at https://gitter.im/myorg/myrepo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/myorg/myrepo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)'
+    var before =  fs.readFileSync(__dirname + '/examples/empty-before.md', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/empty-after.md', { encoding: 'utf8' });
     var result = badger.addBadge(before, 'md', imageUrl, linkUrl, altText);
     assert.equal(result, after)
   })
