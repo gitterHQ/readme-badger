@@ -92,4 +92,11 @@ describe('readme-badger', function() {
 
     assert.equal(result, after);
   });
+
+  it('inserts into empty files', function () {
+    var before =  fs.readFileSync(__dirname + '/examples/empty-before.md', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/empty-after.md', { encoding: 'utf8' });
+    var result = badger.addBadge(before, 'md', imageUrl, linkUrl, altText);
+    assert.equal(result, after)
+  })
 });
