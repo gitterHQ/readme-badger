@@ -21,6 +21,15 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
+  it('inserts into markdown that has badge', function() {
+    var before = fs.readFileSync(__dirname + '/examples/markdown-hasbadge-before.md', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/markdown-hasbadge-after.md', { encoding: 'utf8' });
+
+    var result = badger.addBadge(before, 'md', imageUrl, linkUrl, altText);
+
+    assert.equal(result, after);
+  });
+
   it('inserts into textile', function() {
     var before = fs.readFileSync(__dirname + '/examples/textile-before.textile', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/textile-after.textile', { encoding: 'utf8' });
