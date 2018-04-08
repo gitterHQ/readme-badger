@@ -30,6 +30,15 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
+  it('inserts into markdown that has empty badge', function() {
+    var before = fs.readFileSync(__dirname + '/examples/markdown-empty-badge-before.md', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/markdown-empty-badge-after.md', { encoding: 'utf8' });
+
+    var result = badger.addBadge(before, 'md', imageUrl, linkUrl, altText);
+
+    assert.equal(result, after);
+  });
+
   it('inserts into markdown that content follows the title without empty line', function() {
     var before = fs.readFileSync(__dirname + '/examples/markdown-tense-title-before.md', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/markdown-tense-title-after.md', { encoding: 'utf8' });
