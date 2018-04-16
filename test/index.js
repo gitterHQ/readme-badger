@@ -21,9 +21,18 @@ describe('readme-badger', function() {
     assert.equal(result, after);
   });
 
-  it('inserts into markdown that has badge', function() {
+  it('inserts into markdown that already has a badge', function() {
     var before = fs.readFileSync(__dirname + '/examples/markdown-hasbadge-before.md', { encoding: 'utf8' });
     var after = fs.readFileSync(__dirname + '/examples/markdown-hasbadge-after.md', { encoding: 'utf8' });
+
+    var result = badger.addBadge(before, 'md', imageUrl, linkUrl, altText);
+
+    assert.equal(result, after);
+  });
+
+  it('inserts into markdown that already has a badge with parenthesis link', function() {
+    var before = fs.readFileSync(__dirname + '/examples/markdown-hasbadge-parenthesis-link-before.md', { encoding: 'utf8' });
+    var after = fs.readFileSync(__dirname + '/examples/markdown-hasbadge-parenthesis-link-after.md', { encoding: 'utf8' });
 
     var result = badger.addBadge(before, 'md', imageUrl, linkUrl, altText);
 
