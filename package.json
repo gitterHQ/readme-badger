@@ -1,6 +1,6 @@
 {
   "name": "readme-badger",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Inserts badges into GitHub READMEs",
   "main": "index.js",
   "directories": {
